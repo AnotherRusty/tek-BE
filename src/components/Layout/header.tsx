@@ -15,7 +15,7 @@ const Header = () => {
           <div className="items-center justify-center mt-[10px]">
             <Link href={"/stake"}>
               <div className="bg-[#041A25] rounded-[10px] flex flex-col gap-1 p-[6px]">
-                <img src="/imgs/logo.png" className="object-cover" />
+                <img src="/imgs/logo.png" className="object-cover" alt="logo" />
                 <p className="text-[#44e4bc] text-[16px] font-bold text-center uppercase">
                   coin <br />
                   flip

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { BetOnIcon } from "../../components/SvgList";
 import CoinFlipBet from "../../modules/CoinFlipBet";
@@ -8,6 +9,7 @@ const CoinFlip: NextPage = () => {
         <div className="rounded-full">
           <img
             src="/imgs/coinFlipCenterMark.png"
+            alt="CoinFlip Center Mark"
             className="w-[190px] h-[190px] object-cover shadow-coinMark flex-shrink-0 rounded-full"
           />
         </div>

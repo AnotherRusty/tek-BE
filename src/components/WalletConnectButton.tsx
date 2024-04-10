@@ -91,7 +91,7 @@ const WalletConnectBtn = () => {
                       type="button"
                       className="text-[#68FFA9] flex items-center justify-center gap-[6px] text-[16px] font-bold uppercase bg-[#051A25] px-[20px] py-[8px] rounded-xl"
                     >
-                      <img src="/imgs/metamask.png" />
+                      <img src="/imgs/metamask.png" alt="Metamask" />
                       {account.displayName.slice(0, 4) +
                         "..." +
                         account.displayName.slice(-4)}
