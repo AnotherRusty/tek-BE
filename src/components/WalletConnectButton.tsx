@@ -4,7 +4,7 @@ import "animate.css";
 
 const WalletConnectBtn = () => {
   return (
-    <div className="flex items-center justify-center flex-col gap-[32px] animate__animated animate__fadeIn">
+    <div className="flex items-start md:justify-start justify-end flex-col gap-[32px] animate__animated animate__fadeIn mt-3">
       <ConnectButton.Custom>
         {({
           account,
@@ -41,8 +41,8 @@ const WalletConnectBtn = () => {
                     <button
                       onClick={openConnectModal}
                       type="button"
-                      className="text-white text-[18px] font-bold uppercase bg-gradient-to-r from-[#667EEA] to-[#764BA2] px-[24px] py-[11px]
-                       rounded-md border-b-[3px] border-t-[1px] border-black border-opacity-30"
+                      className="text-[#68FFA9] text-[16px] font-bold uppercase bg-[#051A25] px-[10px] py-[8px]
+                       rounded-xl"
                     >
                       <p
                         style={{
@@ -64,15 +64,15 @@ const WalletConnectBtn = () => {
                 }
 
                 return (
-                  <div className="flex items-center gap-[20px]">
+                  <div className="flex md:flex-row flex-col items-center gap-[10px] mt-2 md:justify-center justify-end">
                     <button
                       onClick={openChainModal}
                       type="button"
-                      className="text-white text-[18px] font-bold uppercase bg-gradient-to-r from-[#667EEA] to-[#764BA2] px-[13px] py-[10px]
-                      rounded-md border-b-[3px] border-t-[1px] border-black border-opacity-30"
+                      className="text-white text-[16px] font-bold uppercase bg-[#051A25] px-[13px] py-[8px]
+                      rounded-xl"
                     >
                       {chain.hasIcon && (
-                        <div className="">
+                        <div className="text-[#68FFA9] flex gap-1 items-center justify-center">
                           {chain.iconUrl && (
                             <img
                               alt={chain.name ?? "Chain icon"}
@@ -80,6 +80,8 @@ const WalletConnectBtn = () => {
                               style={{ width: 20, height: 20 }}
                             />
                           )}
+                          {13.43}
+                          {` MATIC`}
                         </div>
                       )}
                     </button>
@@ -87,8 +89,9 @@ const WalletConnectBtn = () => {
                     <button
                       onClick={openAccountModal}
                       type="button"
-                      className="text-white text-[18px] font-bold uppercase bg-gradient-to-r from-[#667EEA] to-[#764BA2] px-[24px] py-[11px] rounded-md border-b-[3px] border-t-[1px] border-black border-opacity-30"
+                      className="text-[#68FFA9] flex items-center justify-center gap-[6px] text-[16px] font-bold uppercase bg-[#051A25] px-[20px] py-[8px] rounded-xl"
                     >
+                      <img src="/imgs/metamask.png" alt="Metamask" />
                       {account.displayName.slice(0, 4) +
                         "..." +
                         account.displayName.slice(-4)}

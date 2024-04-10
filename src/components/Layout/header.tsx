@@ -10,43 +10,23 @@ const Header = () => {
   const router = useRouter();
   return (
     <>
-      <div className="w-full xl:flex hidden items-center justify-between h-[80px]">
-        <div className="w-full border-[1px] border-white opacity-10" />
-        <div className="px-20 xl:min-w-[1200px] w-full flex items-center justify-between z-0">
-          <div className="flex gap-[30px] items-center justify-center">
-            <Link href={"/"}>
-              <li
-                className={`text-[14px] font-bold text-white uppercase border-r-2 duration-300 transition-all
-                border-white list-none border-opacity-10 pr-[30px] hover:text-yellow-200 ${
-                  router.pathname === "/" && "text-yellow-400"
-                }`}
-              >
-                home
-              </li>
-            </Link>
+      <div className="w-full flex justify-between items-center">
+        <div className="md:px-5 px-4 xl:min-w-[1200px] w-full flex items-start justify-between z-0 relative">
+          <div className="items-center justify-center mt-[10px]">
             <Link href={"/stake"}>
-              <li
-                className={`text-[14px] font-bold text-white uppercase border-r-2 duration-300 transition-all
-                border-white list-none border-opacity-10 pr-[30px] hover:text-yellow-200 ${
-                  router.pathname === "/stake" && "text-yellow-400"
-                }`}
-              >
-                stake now
-              </li>
+              <div className="bg-[#041A25] rounded-[10px] flex flex-col gap-1 p-[6px]">
+                <img src="/imgs/logo.png" className="object-cover" alt="logo" />
+                <p className="text-[#44e4bc] text-[16px] font-bold text-center uppercase">
+                  coin <br />
+                  flip
+                </p>
+              </div>
             </Link>
           </div>
           <WalletConnectBtn />
         </div>
-        <div className="w-full border-[1px] border-white opacity-10" />
-        <div className="flex items-center justify-center top-[24px] absolute left-0 right-0 -z-[3]">
-          <img
-            src="/imgs/logo.png"
-            className="w-[60px] h-[60px] lg:w-[106px] lg:h-[112px]"
-            alt=""
-          />
-        </div>
       </div>
-      <div className="relative flex items-center justify-between w-full p-7 border-b-[1px] border-white border-opacity-10 xl:hidden">
+      {/* <div className="relative flex items-center justify-between w-full p-7 border-b-[1px] border-white border-opacity-10 xl:hidden">
         <div
           className="relative flex items-center justify-center cursor-pointer z-[1]"
           onClick={() => setShowMenu(true)}
@@ -64,8 +44,8 @@ const Header = () => {
           <img src="/imgs/magiceden.png" alt="" />
           <img src="/imgs/discord.png" alt="" />
         </div>
-      </div>
-      {showMenu && (
+      </div> */}
+      {/* {showMenu && (
         <div className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-start w-full bg-black bg-opacity-80 backdrop-blur-md z-[9999] flex-col animate__animated animate__fadeIn animate__faster  ">
           <p className="text-white text-[50px] font-bold uppercase mt-[72px]">
             Navigation
@@ -111,7 +91,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };

@@ -12,7 +12,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="absolute top-[-16px] left-0 right-0 flex items-center justify-center w-full">
-        <img src="/imgs/logo.png" alt="" className="w-[64px] h-[64px]" />
+        <img src="/imgs/logo2.png" alt="" className="w-[64px] h-[64px]" />
       </div>
       <div className="flex items-center justify-end gap-[20px] z-1">
         <img src="/imgs/opensea.png" alt="" className="cursor-pointer" />
