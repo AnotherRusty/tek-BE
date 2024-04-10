@@ -15,13 +15,6 @@ const ImgBackground = () => {
         className="absolute xl:w-[758px] w-[340px] h-[558px] top-[100px] right-[200px] bg-[#8B6BF1]
       filter blur-[200px] rounded-full opacity-50 -z-[9999]"
       />
-      <div className="absolute filter rounded-full -z-[9997] md:top-[200px] top-[160px] left-0 right-0 flex items-center justify-center">
-        <img
-          src="/imgs/centerMark.png"
-          className="w-[370px] -z-[9998] h-full md:opacity-20 opacity-30 mr-[20px]"
-          alt="CenterMark"
-        />
-      </div>
     </div>
   );
 };

@@ -7,7 +7,14 @@ import {
 
 const WalletChecker = () => {
   return (
-    <div className="w-full flex items-center justify-center flex-col">
+    <div className="w-full flex items-center justify-center flex-col relative">
+      <div className="absolute filter rounded-full -z-[9997] md:top-[150px] top-[120px] left-0 right-0 flex items-center justify-center">
+        <img
+          src="/imgs/centerMark.png"
+          className="w-[370px] -z-[9998] h-full md:opacity-20 opacity-20 mr-[20px]"
+          alt="CenterMark"
+        />
+      </div>
       <h1 className="md:text-[48px] text-[30px] font-extrabold text-center bg-gradient-to-r from-[#6BF58C] to-[#148F2F] bg-clip-text text-transparent md:leading-[65px] leading-[50px]">
         {`CHECK YOUR $TEK`} <br />
         {` HOLDINGS`}
@@ -23,9 +30,9 @@ const WalletChecker = () => {
               className="h-[28px] md:text-[16px] text-[14px] w-[90%] bg-transparent placeholder:font-bold placeholder:uppercase placeholder:md:text-[16px] placeholder:text-[14px] outline-none text-white placeholder:text-[#7A787A] font-bold"
               placeholder="Please drop your address"
             />
-            <PolygonIcon />
+            <PolygonIcon color={""} />
           </div>
-          <button className="w-full p-[13px] rounded-md bg-gradient-to-tr from-[#6BF58C] to-[#148F2F] flex items-center justify-center gap-4 shadow-inner">
+          <button className="w-full p-[13px] rounded-md bg-gradient-to-tr from-[#6BF58C] to-[#148F2F] flex items-center justify-center gap-4 shadow-btn">
             <p
               className="md:text-[16px] text-[14px] font-bold text-white uppercase"
               style={{
