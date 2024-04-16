@@ -17,8 +17,9 @@ const WalletChecker = () => {
 
   const fetch = async () => {
     try {
+      if (!address) return
       setLoading(true)
-      const res: any = (await axios.post('http://localhost:9000/api/users/amount', { address })).data
+      const res: any = (await axios.post('https://tekio-io.vercel.app/api/users/amount', { address })).data
       setBronze(res.bronze)
       setSilver(res.silver)
       setGold(res.gold)
@@ -74,14 +75,14 @@ const WalletChecker = () => {
             <CheckHoldingIcon />
           </button>
           <div className="flex justify-between text-white">
-            <div className="flex justify-center items-center gap-3"><img src="/imgs/bronze.png" className="w-10 h-10 object-cover" alt="mark"/>
-            <p className="font-bold text-white text-xl">{bronze}</p></div>
-            <div className="flex justify-center items-center gap-3"><img src="/imgs/silver.png" className="w-10 h-10 object-cover" alt="mark"/>
-            <p className="font-bold text-white text-xl">{silver}</p></div>
-            <div className="flex justify-center items-center gap-3"><img src="/imgs/gold.png" className="w-10 h-10 object-cover" alt="mark"/>
-            <p className="font-bold text-white text-xl">{gold}</p></div>
-            <div className="flex justify-center items-center gap-3"><img src="/imgs/diamond.png" className="w-10 h-10 object-cover" alt="mark"/>
-            <p className="font-bold text-white text-xl">{diamond}</p></div>
+            <div className="flex justify-center items-center gap-3"><img src="/imgs/bronze.png" className="w-10 h-10 object-cover" alt="mark" />
+              <p className="font-bold text-white text-xl">{bronze}</p></div>
+            <div className="flex justify-center items-center gap-3"><img src="/imgs/silver.png" className="w-10 h-10 object-cover" alt="mark" />
+              <p className="font-bold text-white text-xl">{silver}</p></div>
+            <div className="flex justify-center items-center gap-3"><img src="/imgs/gold.png" className="w-10 h-10 object-cover" alt="mark" />
+              <p className="font-bold text-white text-xl">{gold}</p></div>
+            <div className="flex justify-center items-center gap-3"><img src="/imgs/diamond.png" className="w-10 h-10 object-cover" alt="mark" />
+              <p className="font-bold text-white text-xl">{diamond}</p></div>
           </div>
         </div>
         <div className="flex justify-center items-center gap-6 bg-white bg-opacity-10 p-[24px] rounded-3xl w-full">
